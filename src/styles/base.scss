@@ -1,0 +1,25 @@
+$color-main-100: #f6f8fd;
+$color-main-200: #d2daf7;
+$color-main-300: #b8c4f2;
+$color-main-400: #9daeed;
+$color-main-500: #8298e8;
+$color-main-600: #4062dc;
+$color-main-700: #203faf;
+$color-main-800: #14276d;
+$color-main-900: #0c1842;
+
+$grey: #212121;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $color-main-100;
+  font-family: sans-serif;
+  letter-spacing: 1px;
+}
