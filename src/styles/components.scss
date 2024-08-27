@@ -1,0 +1,94 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40rem;
+  margin: 4rem auto;
+}
+
+.select-container {
+  position: relative;
+  font-size: 1rem;
+  color: $grey-500;
+  width: 100%;
+  max-width: 22rem;
+}
+
+.select-ctrl {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  font-size: inherit;
+  color: inherit;
+  border: 1px solid $grey-300;
+  background-color: #ffffff;
+  padding: 12px 20px;
+  border-radius: 12px;
+  cursor: pointer;
+
+  &--open {
+    & > svg {
+      transform: rotateX(180deg);
+    }
+  }
+
+  & > svg {
+    width: 1rem;
+    height: 1rem;
+    transition: all 0.2s;
+  }
+}
+
+.select-dropdown {
+  list-style: none;
+  position: absolute;
+  width: 100%;
+  max-height: 19rem;
+  left: 0;
+  top: calc(100% + 8px);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 20px 16px;
+  border-radius: 12px;
+  transition: all 0.2s;
+  border: 1px solid $grey-300;
+  transform-origin: top;
+  background-color: #ffffff;
+
+  &--close {
+    pointer-events: none;
+    opacity: 0;
+    transform: scaleY(0);
+    overflow: hidden;
+  }
+
+  &--open {
+    pointer-events: auto;
+    opacity: 100%;
+    transform: scaleY(100%);
+    overflow: scroll;
+  }
+}
+
+.select-option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 16px;
+  border-radius: 8px;
+  color: inherit;
+  cursor: pointer;
+
+  &--selected {
+    color: $color-main-600;
+    background-color: $grey-50;
+  }
+
+  & > svg {
+    width: 1rem;
+    height: 1rem;
+    color: $color-main-600;
+  }
+}
